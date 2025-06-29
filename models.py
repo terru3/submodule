@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 class Repository(BaseModel):
@@ -6,3 +8,8 @@ class Repository(BaseModel):
 
 class ParentRepository(Repository):
     submodules: list[Repository] = []
+
+class GitNote(BaseModel):
+    concept: str
+    explanation: str
+    code_example: Optional[str] = None
