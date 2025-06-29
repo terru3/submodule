@@ -31,7 +31,7 @@ class GitMergeConflict(BaseModel):
     metadata: str
     author: str
 
-class Modes(str, Enum):
+class Env(str, Enum):
     DEV = "dev"
     STAGING = "staging"
     PROD = "prod"
