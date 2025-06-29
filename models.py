@@ -22,3 +22,8 @@ class GitDiff(BaseModel):
 class GitBlame(BaseModel):
     problem: str
     author: str
+
+class GitMergeConflict(BaseModel):
+    diff: GitDiff
+    blame: GitBlame
+    metadata: str
