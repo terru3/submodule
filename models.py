@@ -8,6 +8,7 @@ class Repository(BaseModel):
 
 class ParentRepository(Repository):
     submodules: list[Repository] = []
+    metadata: str
 
 class GitNote(BaseModel):
     concept: str
@@ -27,3 +28,4 @@ class GitMergeConflict(BaseModel):
     diff: GitDiff
     blame: GitBlame
     metadata: str
+    author: str
