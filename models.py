@@ -1,3 +1,4 @@
+from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel
@@ -29,3 +30,10 @@ class GitMergeConflict(BaseModel):
     blame: GitBlame
     metadata: str
     author: str
+
+class Modes(str, Enum):
+    DEV = "dev"
+    STAGING = "staging"
+    PROD = "prod"
+    TEST = "prod"
+    CANARY_1 = "canary_1"
