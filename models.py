@@ -13,3 +13,7 @@ class GitNote(BaseModel):
     concept: str
     explanation: str
     code_example: Optional[str] = None
+
+class GitDiff(BaseModel):
+    original: str
+    new: str
